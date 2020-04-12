@@ -1,23 +1,23 @@
-LING83800: MP4
+LING83800: Homework "4"
 ==============
 
 In this assignment, you will build a bigram hidden Markov model tagger.
 
 To do this you will:
 
-1.  write a script which extracts the *sufficient statistics* (emission and
+1.  write a script that extracts the *sufficient statistics* (emission and
     transition probabilities) from labeled data, and
-2.  write a script which implements greedy decoding.
+2.  write a script that implements greedy decoding.
 
 Part 1: tagger training
 -----------------------
 
 In the first part of this assignment, you will compute *sufficient statistics*
-for your HMM tagger using the tagged and tokenized data in `data/train.tag`.
+for your HMM tagger using the tagged and tokenized data in [data/train.tag](data/train.tag).
 
 ### What to do
 
-Write a script called `train_tagger.py` which reads this data, sentence by
+Write a script called `train_tagger.py` that reads this data, sentence by
 sentence, and computes:
 
 -   the bigram transition probabilities $P(t_i \mid t_{i - 1})$ where $t_i$ is
@@ -38,7 +38,7 @@ has zero probability. Then, write these probabilities out to a file or files.
 -   **Do not** read the whole file in at once. Process it sentence by sentence.
 -   You may choose to store the emission and transition probabilities in the
     same file or in separate files; it's up to you.
--   For your output files, use familiar formats like JSON, YAML, TSV, etc.;
+-   For your output files, use familiar formats like JSON, YAML, TSV, NPZ, etc.;
     don't invent your own format.
 
 ### Stretch goals
@@ -60,8 +60,8 @@ to tag data.
 What to do
 ----------
 
-Write a script called `decode_tagger.py` which reads in the sufficient
-statistics file(s), and then, for each sentence in `data/test.tag`,
+Write a script called `decode_tagger.py` that reads in the sufficient
+statistics file(s), and then, for each sentence in [data/test.tag](data/test.tag),
 
 1.  computes the most likely tag for each slot, assuming the previous slot is
     correct, and
@@ -71,7 +71,7 @@ statistics file(s), and then, for each sentence in `data/test.tag`,
 ### What to turn in
 
 -   Your decoder script, and
--   predicted tags for the `data/test.tag` using this method.
+-   predicted tags for [data/test.tag](data/test.tag) using this method.
 
 ### Hints
 
@@ -88,6 +88,6 @@ statistics file(s), and then, for each sentence in `data/test.tag`,
     data to be tagged, pass these in as command-line arguments.
 -   Continuing the stretch goal from part 1 (see above), perform your
     computations in the negative log probability domain.
--   Evaluate your performance on `data/test.tag` by computing token accuracy
+-   Evaluate your performance on [data/test.tag](data/test.tag) by computing token accuracy
     (i.e., the percentage of tokens correctly tagged).
 -   Experiment with case-folding---does it help?
