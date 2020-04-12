@@ -20,10 +20,10 @@ for your HMM tagger using the tagged and tokenized data in [data/train.tag](data
 Write a script called `train_tagger.py` that reads this data, sentence by
 sentence, and computes:
 
--   the bigram transition probabilities $P(t_i \mid t_{i - 1})$ where $t_i$ is
-    the tag at time $i$, and
--   the emission probabilities $P(w_i \mid t_i)$ where $w_i$ is the token at
-    time $i$.
+-   the bigram transition probabilities ![P(t_i \mid t_{i - 1})](https://render.githubusercontent.com/render/math?math=P(t_i%20%5Cmid%20t_%7Bi%20-%201%7D)) where ![t_i](https://render.githubusercontent.com/render/math?math=t_i) is
+    the tag at time *i*, and
+-   the emission probabilities ![P(w_i \mid t_i)](https://render.githubusercontent.com/render/math?math=P(w_i%20%5Cmid%20t_i)) where ![w_i](https://render.githubusercontent.com/render/math?math=w_i) is the token at
+    time *i*.
 
 Pad the transition sequence with a special `<s>` start symbol. Also, apply
 add-one smoothing to the bigram transition probabilities so that no transition
